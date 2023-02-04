@@ -1,0 +1,48 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: large;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+#calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 90px);
+    grid-template-rows: minmax(90px, auto)
+    repeat(5, 70px);
+    border: 10px solid black;
+    background-color: black;
+    gap: 1px;
+    
+}
+
+.display {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    font-size: 4em;
+    border: 2px solid black;
+    padding-right: 5px;
+    background-color: white;
+    /*Hides extra numbers, but they are still there*/
+    overflow: hidden;     
+
+}
+
+.two-cubes {
+    grid-column: span 2;
+}
+
+.three-cubes {
+    grid-column: span 3;
+}
